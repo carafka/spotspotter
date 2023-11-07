@@ -1,0 +1,50 @@
+{
+  "login": {
+    "title": "Login"
+  },
+  "home": {
+    "title": "Home - kafelki"
+  },
+  "e-schema": {
+    "title": "E-SCHEMAT"
+  },
+  "employees": {
+    "title": "Pracownicy",
+    "addEmployee": "Dodaj pracownika",
+    "removingEmployee": "Usuwanie pracowników",
+    "changeStatus": "Zmiana statusu",
+    "changeCell": "Zmiana komórki",
+    "more": "Więcej",
+    "selected": "wybranych",
+    "position": "Stanowisko",
+    "cell": "Komórka",
+    "status": "Status",
+    "lastName": "Nazwisko",
+    "name": "Imię",
+    "tableSettings": "Ustawienia tabeli",
+    "search": "Szukaj",
+    "active": "Aktywny",
+    "inActive": "Nieaktywny",
+    "fired": "Zwolniony"
+  },
+  "organizationTree": {
+    "title": "Drzewo organizacji",
+    "properties": "Właściwości Drzewa",
+    "cells": "Komórki",
+    "details": "Szczegóły",
+    "search": "Szukaj Komórek",
+    "add": "Dodaj Komórkę"
+  },
+  "structure": {
+    "title": "Struktura"
+  },
+  "common": {
+    "logout": "Wyloguj"
+  },
+  "tiles": {
+    "eschema": "E-schemat",
+    "kaizen": "Program Kaizen",
+    "module3": "Moduł 3",
+    "module4": "Moduł 4"
+  }
+}
