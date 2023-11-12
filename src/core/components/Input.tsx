@@ -1,9 +1,10 @@
-import React from "react";
-import { TextField, StandardTextFieldProps, styled } from "@mui/material";
+import { TextField, StandardTextFieldProps, styled } from '@mui/material';
 
-interface InputProps extends StandardTextFieldProps {}
+type TextInputProps = {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+} & StandardTextFieldProps;
 
-export const Input = (props: InputProps) => {
+export const Input = (props: TextInputProps) => {
   return <CustomTextField {...props} />;
 };
 

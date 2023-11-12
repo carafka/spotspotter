@@ -1,0 +1,7 @@
+{
+  "src/**/*.{ts,tsx}": [
+    "eslint src --report-unused-disable-directives --max-warnings 0",
+    "prettier --write",
+    "tsc-files --noEmit"
+  ]
+}

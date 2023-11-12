@@ -12,9 +12,9 @@ To install **Application Monorepo**, follow these steps:
 2. Navigate to the root folder of the project in your terminal
 3. Run the following command:
 
-    `npm i`
+   `npm i`
 
-    This will install all the necessary dependencies for the project and dependencies of packages.
+   This will install all the necessary dependencies for the project and dependencies of packages.
 
 ## Running
 
@@ -23,8 +23,8 @@ To install **Application Monorepo**, follow these steps:
 1. Navigate to the root folder of the project in your terminal
 2. Run the desired script using the following command:
 
-    `npm run dev:<project-name>`
+   `npm run dev:<project-name>`
 
-    For example, if you want to run the development **billabee** project, you can use the following command:
+   For example, if you want to run the development **billabee** project, you can use the following command:
 
-    `npm run dev:spotspotter`
+   `npm run dev:spotspotter`

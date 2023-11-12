@@ -1,10 +1,8 @@
-import { styled } from "@mui/material";
-
-interface BugReportProps {}
+import { styled } from '@mui/material';
 
 export const BugReport = () => {
   const sendEmail = () => {
-    window.location = "mailto:xyz@yourapplicationdomain.com";
+    window.open('mailto:spotspotterxyz@gmail.com');
   };
 
   return (
@@ -14,7 +12,7 @@ export const BugReport = () => {
   );
 };
 
-const ReportContainer = styled("div")`
+const ReportContainer = styled('div')`
   color: rgba(0, 0, 0, 0.31);
   font-family: Outfit;
   font-size: 14px;

@@ -1,4 +1,4 @@
-import { Navigate, Outlet, useParams } from "react-router-dom";
+import { Navigate, Outlet, useParams } from 'react-router-dom';
 
 export const ProtectedRoutes = () => {
   const auth = { token: true };

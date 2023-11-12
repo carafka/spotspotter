@@ -1,7 +1,10 @@
 // import { useTranslation } from "react-i18next";
-import { styled } from "@mui/material";
-import SpotspotterLogo from "../../assets/spotspotter-logo.png";
-import { Input } from "@/core/components";
+import { Link } from 'react-router-dom';
+import { Box, Button, styled } from '@mui/material';
+import { Input } from '@/core/components';
+import SpotspotterLogo from '../../assets/spotspotter-logo.png';
+import { ThirdPartyAuthButton } from '../components';
+import { externalAuthApps } from '../constants';
 
 export const Login = () => {
   // const { t } = useTranslation();
@@ -12,21 +15,37 @@ export const Login = () => {
         <img src={SpotspotterLogo} alt="" />
         <Input label="Username" />
         <Input label="Password" />
-        {/* Rows with 'No account yet...' and 'Forgot password?' */}
-        {/* Button with Sign in */}
-        {/* Or sign up With */}
-        {/* Row with 3 social media icons */}
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Link to="/signup">No account yet...</Link>
+          <Link to="/forgot-password">Forgot password?</Link>
+        </Box>
+        <Button variant="contained" color="primary">
+          Sign in
+        </Button>
+
+        <ExternalAuthApps>
+          {externalAuthApps.map(({ icon, authHandler }) => (
+            <ThirdPartyAuthButton externalAuthHandler={authHandler}>
+              {icon}
+            </ThirdPartyAuthButton>
+          ))}
+        </ExternalAuthApps>
       </FormContainer>
     </>
   );
 };
 
-const FormContainer = styled("div")`
+const FormContainer = styled('div')`
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+`;
+
+const ExternalAuthApps = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
 `;
