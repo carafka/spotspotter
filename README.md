@@ -1,30 +1,60 @@
-# Application Monorepo
+# SpotSpotter - Car Photography Location App
 
-Welcome to **Application Monorepo**, a beautiful project aimed at solving multiple projects problem with connected packages. This project is powered by **npm workspaces**.
+SpotSpotter is a mobile application that enables car enthusiasts to discover and share fantastic locations for car photography. Whether you're looking for a scenic backdrop, an urban setting, or a hidden gem, SpotSpotter helps you find and document the best spots to capture stunning car photos.
 
-https://docs.npmjs.com/cli/v9/using-npm/workspaces?v=true
+## Features
 
-## Installation
+- **Add Photos:** Share your favorite car photos and contribute to the community.
+- **Mark Locations:** Pinpoint locations on the map where you've discovered great spots for car photography.
+- **Discover Spots:** Explore a map to find popular spots marked by other users.
+- **Community Interaction:** Like and comment on photos, fostering a community of car photography enthusiasts.
 
-To install **Application Monorepo**, follow these steps:
+## Getting Started
 
-1. Clone the repo to your local machine
-2. Navigate to the root folder of the project in your terminal
-3. Run the following command:
+### Prerequisites
 
-   `npm i`
+- Make sure you have [Node.js](https://nodejs.org/) installed.
 
-   This will install all the necessary dependencies for the project and dependencies of packages.
+### Installation
 
-## Running
+1. Clone the repository:
 
-**Application Monorepo** is a npm workspaces monorepo, which means that there are multiple scripts in `package.json` that can be run for different parts of the project. To run the project, follow these steps:
+   ```bash
+   git clone https://github.com/nerooc/spotspotter-evolved.git
+   ```
 
-1. Navigate to the root folder of the project in your terminal
-2. Run the desired script using the following command:
+2. Change into the project directory:
 
-   `npm run dev:<project-name>`
+   ```bash
+   cd spotspotter-evolved
+   ```
 
-   For example, if you want to run the development **billabee** project, you can use the following command:
+3. Install dependencies:
 
-   `npm run dev:spotspotter`
+   ```bash
+   pnpm install
+   ```
+
+### Usage
+
+1. Start the development server:
+
+   ```bash
+   pnpm run dev
+   ```
+
+   This will launch the SpotSpotter app on your local machine.
+
+2. Open the app in your browser:
+
+   ```
+   http://localhost:5173
+   ```
+
+## Contributing
+
+We welcome contributions from the community! If you have suggestions, bug reports, or would like to contribute new features, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
