@@ -21,7 +21,7 @@ const ButtonContainer = styled(Box)`
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 1px solid #a7a7a7;
+  border: 0.4px solid #a7a7a7;
   background-color: #ece9ec;
   transition: all 0.2s;
 
