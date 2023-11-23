@@ -1,12 +1,20 @@
 // import { useTranslation } from "react-i18next";
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, styled } from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { Box, IconButton, InputAdornment, styled } from '@mui/material';
 import { ThirdPartyAuthButton, AuthButton, AuthInput } from '@/auth/components';
 import { externalAuthApps } from '@/auth/constants';
-import SpotspotterLogo from '../../assets/spotspotter-logo.png';
+import SpotspotterLogo from '../../assets/spotspotter-logo.svg';
 
 export const Login = () => {
   // const { t } = useTranslation();
+  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const handleClickisPasswordVisible = () =>
+    setIsPasswordVisible(!isPasswordVisible);
+  const handleMouseDownPassword = () =>
+    setIsPasswordVisible(!isPasswordVisible);
 
   return (
     <AuthPageContainer>
@@ -14,7 +22,29 @@ export const Login = () => {
         <img src={SpotspotterLogo} alt="" />
         <AuthInputs>
           <AuthInput label="Username" onChange={() => {}} />
-          <AuthInput label="Password" onChange={() => {}} />
+          <AuthInput
+            label="Password"
+            type={isPasswordVisible ? 'text' : 'password'} // <-- This is where the magic happens
+            onChange={() => {}}
+            InputProps={{
+              // <-- This is where the toggle button is added.
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickisPasswordVisible}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {isPasswordVisible ? (
+                      <VisibilityIcon />
+                    ) : (
+                      <VisibilityOffIcon />
+                    )}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
         </AuthInputs>
 
         <AuthIssuesRow>
@@ -72,8 +102,14 @@ const AuthIssuesRow = styled(Box)`
   width: 100%;
   justify-content: space-between;
   margin: 19px 0;
+  font-size: 14px;
 
   * {
+    color: #34a853;
+  }
+
+  & > a:hover {
+    filter: brightness(0.8);
     color: #34a853;
   }
 `;
