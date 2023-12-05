@@ -7,7 +7,11 @@ type AuthButtonProps = {
 };
 
 export const AuthButton = (props: AuthButtonProps) => {
-  return <CustomButton {...props}>{props.children}</CustomButton>;
+  return (
+    <CustomButton variant="contained" color="primary" {...props}>
+      {props.children}
+    </CustomButton>
+  );
 };
 
 const CustomButton = styled(Button)`

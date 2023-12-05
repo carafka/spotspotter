@@ -6,7 +6,7 @@ import {
 import { Input } from '@/core/components';
 
 type AuthInputProps = {
-  onChange: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 } & StandardTextFieldProps;
 
 export const AuthInput = (props: AuthInputProps) => {

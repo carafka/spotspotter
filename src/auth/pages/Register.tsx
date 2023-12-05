@@ -19,8 +19,10 @@ export const Register = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const handleClickisPasswordVisible = () =>
     setIsPasswordVisible(!isPasswordVisible);
-  const handleMouseDownPassword = () =>
-    setIsPasswordVisible(!isPasswordVisible);
+
+  const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
 
   return (
     <AuthLayout>
@@ -30,7 +32,7 @@ export const Register = () => {
         <AuthInput
           label="Password"
           type={isPasswordVisible ? 'text' : 'password'}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={onPasswordChange}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -76,9 +78,7 @@ export const Register = () => {
       <AuthIssuesRow>
         <Link to="/login">I already have an account!</Link>
       </AuthIssuesRow>
-      <AuthButton variant="contained" color="primary">
-        Sign up
-      </AuthButton>
+      <AuthButton onClick={() => {}}>Sign up</AuthButton>
       <ThirdPartyDisclaimer>Or Use</ThirdPartyDisclaimer>
 
       <ExternalAuthApps>

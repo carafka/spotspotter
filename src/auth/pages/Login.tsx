@@ -51,9 +51,7 @@ export const Login = () => {
         <Link to="/register">No account yet...</Link>
         <Link to="/forgot-password">Forgot password?</Link>
       </AuthIssuesRow>
-      <AuthButton variant="contained" color="primary">
-        Sign in
-      </AuthButton>
+      <AuthButton onClick={() => {}}>Sign in</AuthButton>
       <ThirdPartyDisclaimer>Or Sign up with</ThirdPartyDisclaimer>
 
       <ExternalAuthApps>
