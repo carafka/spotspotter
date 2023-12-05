@@ -1,5 +1,6 @@
 // import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import PasswordStrengthBar from 'react-password-strength-bar';
 import { Link } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -12,7 +13,9 @@ import {
 } from '@/auth/components';
 import { externalAuthApps } from '@/auth/constants';
 
-export const Login = () => {
+export const Register = () => {
+  // const { t } = useTranslation();
+  const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const handleClickisPasswordVisible = () =>
     setIsPasswordVisible(!isPasswordVisible);
@@ -23,8 +26,32 @@ export const Login = () => {
     <AuthLayout>
       <AuthInputs>
         <AuthInput label="Username" onChange={() => {}} />
+        <AuthInput label="Email" onChange={() => {}} />
         <AuthInput
           label="Password"
+          type={isPasswordVisible ? 'text' : 'password'}
+          onChange={(e) => setPassword(e.target.value)}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickisPasswordVisible}
+                >
+                  {isPasswordVisible ? (
+                    <VisibilityIcon />
+                  ) : (
+                    <VisibilityOffIcon />
+                  )}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+        {password && <PasswordStrengthBar password={password} />}
+
+        <AuthInput
+          label="Repeat Password"
           type={isPasswordVisible ? 'text' : 'password'}
           onChange={() => {}}
           InputProps={{
@@ -33,7 +60,6 @@ export const Login = () => {
                 <IconButton
                   aria-label="toggle password visibility"
                   onClick={handleClickisPasswordVisible}
-                  onMouseDown={handleMouseDownPassword}
                 >
                   {isPasswordVisible ? (
                     <VisibilityIcon />
@@ -48,13 +74,12 @@ export const Login = () => {
       </AuthInputs>
 
       <AuthIssuesRow>
-        <Link to="/register">No account yet...</Link>
-        <Link to="/forgot-password">Forgot password?</Link>
+        <Link to="/login">I already have an account!</Link>
       </AuthIssuesRow>
       <AuthButton variant="contained" color="primary">
-        Sign in
+        Sign up
       </AuthButton>
-      <ThirdPartyDisclaimer>Or Sign up with</ThirdPartyDisclaimer>
+      <ThirdPartyDisclaimer>Or Use</ThirdPartyDisclaimer>
 
       <ExternalAuthApps>
         {externalAuthApps.map(({ icon, authHandler }) => (
@@ -78,7 +103,7 @@ const AuthInputs = styled(Box)`
 const AuthIssuesRow = styled(Box)`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin: 19px 0;
   font-size: 14px;
 
