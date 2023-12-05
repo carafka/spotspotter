@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider, styled } from '@mui/material';
-import { Login } from '@/auth/pages';
+import { Login, Register } from '@/auth/pages';
 import { Home } from '@/map/pages';
 import { appTheme } from './themes';
 
@@ -16,8 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-
-          {/* <Route element={<ProtectedRoutes />}></Route> */}
+          <Route path="/register" element={<Register />} />
         </Routes>
       </AppContainer>
     </ThemeProvider>
