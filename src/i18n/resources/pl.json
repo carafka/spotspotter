@@ -1,50 +1,27 @@
 {
-  "login": {
-    "title": "Login"
-  },
-  "home": {
-    "title": "Home - kafelki"
-  },
-  "e-schema": {
-    "title": "E-SCHEMAT"
-  },
-  "employees": {
-    "title": "Pracownicy",
-    "addEmployee": "Dodaj pracownika",
-    "removingEmployee": "Usuwanie pracowników",
-    "changeStatus": "Zmiana statusu",
-    "changeCell": "Zmiana komórki",
-    "more": "Więcej",
-    "selected": "wybranych",
-    "position": "Stanowisko",
-    "cell": "Komórka",
-    "status": "Status",
-    "lastName": "Nazwisko",
-    "name": "Imię",
-    "tableSettings": "Ustawienia tabeli",
-    "search": "Szukaj",
-    "active": "Aktywny",
-    "inActive": "Nieaktywny",
-    "fired": "Zwolniony"
-  },
-  "organizationTree": {
-    "title": "Drzewo organizacji",
-    "properties": "Właściwości Drzewa",
-    "cells": "Komórki",
-    "details": "Szczegóły",
-    "search": "Szukaj Komórek",
-    "add": "Dodaj Komórkę"
-  },
-  "structure": {
-    "title": "Struktura"
-  },
-  "common": {
-    "logout": "Wyloguj"
-  },
-  "tiles": {
-    "eschema": "E-schemat",
-    "kaizen": "Program Kaizen",
-    "module3": "Moduł 3",
-    "module4": "Moduł 4"
+  "auth": {
+    "login": {
+      "no_account": "No account yet...",
+      "forgot_password": "Forgot password?",
+      "sign_in": "Sign in",
+      "sign_up": "Or Sign up with"
+    },
+    "register": {
+      "have_account": "I already have an account!",
+      "sign_up": "Sign up",
+      "or_use": "Or use"
+    },
+    "forgot_password": {
+      "description": "Enter your email, and we'll send you a link to reset the password. Check your inbox, follow the link, and set up a new password to regain access.",
+      "easy": "Easy as that!",
+      "back_to_login": "Back to login...",
+      "reset_password": "Reset password",
+      "sign_up": "Or Sign up with"
+    },
+    "reset_password": {
+      "description": "Create a new password for your account. Ensure security by entering your new password twice.",
+      "update_password": "Update password",
+      "sign_up": "Or Sign up with"
+    }
   }
 }

@@ -1,9 +1,10 @@
 // import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { Box, IconButton, InputAdornment, styled } from '@mui/material';
+import { IconButton, InputAdornment } from '@mui/material';
 import {
   ThirdPartyAuthButton,
   AuthButton,
@@ -11,8 +12,16 @@ import {
   AuthLayout,
 } from '@/auth/components';
 import { externalAuthApps } from '@/auth/constants';
+import {
+  AuthInputs,
+  AuthIssuesRow,
+  ExternalAuthApps,
+  ThirdPartyDisclaimer,
+} from '@/auth/styles';
 
 export const Login = () => {
+  const { t } = useTranslation();
+
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const handleClickisPasswordVisible = () =>
     setIsPasswordVisible(!isPasswordVisible);
@@ -47,12 +56,12 @@ export const Login = () => {
         />
       </AuthInputs>
 
-      <AuthIssuesRow>
-        <Link to="/register">No account yet...</Link>
-        <Link to="/forgot-password">Forgot password?</Link>
+      <AuthIssuesRow align="space-between">
+        <Link to="/register">{t('auth.login.no_account')}</Link>
+        <Link to="/forgot-password">{t('auth.login.forgot_password')}</Link>
       </AuthIssuesRow>
-      <AuthButton onClick={() => {}}>Sign in</AuthButton>
-      <ThirdPartyDisclaimer>Or Sign up with</ThirdPartyDisclaimer>
+      <AuthButton onClick={() => {}}>{t('auth.login.sign_in')}</AuthButton>
+      <ThirdPartyDisclaimer>{t('auth.login.sign_up')}</ThirdPartyDisclaimer>
 
       <ExternalAuthApps>
         {externalAuthApps.map(({ icon, authHandler }) => (
@@ -64,40 +73,3 @@ export const Login = () => {
     </AuthLayout>
   );
 };
-
-const AuthInputs = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 14px;
-  margin-top: 28px;
-`;
-
-const AuthIssuesRow = styled(Box)`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 19px 0;
-  font-size: 14px;
-
-  * {
-    color: #34a853;
-  }
-
-  & > a:hover {
-    filter: brightness(0.8);
-    color: #34a853;
-  }
-`;
-
-const ThirdPartyDisclaimer = styled('p')`
-  font-size: 14px;
-  color: #555252;
-  margin: 24px 0;
-`;
-
-const ExternalAuthApps = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-`;

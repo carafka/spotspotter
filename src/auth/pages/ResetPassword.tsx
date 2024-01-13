@@ -13,13 +13,14 @@ import {
 } from '@/auth/components';
 import { externalAuthApps } from '@/auth/constants';
 import {
+  AuthDescription,
   AuthInputs,
   AuthIssuesRow,
   ExternalAuthApps,
   ThirdPartyDisclaimer,
 } from '@/auth/styles';
 
-export const Register = () => {
+export const ResetPassword = () => {
   const { t } = useTranslation();
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -32,9 +33,9 @@ export const Register = () => {
 
   return (
     <AuthLayout>
-      <AuthInputs>
-        <AuthInput label="Username" onChange={() => {}} />
-        <AuthInput label="Email" onChange={() => {}} />
+      <AuthDescription>{t('auth.reset_password.description')}</AuthDescription>
+
+      <AuthInputs sx={{ marginBottom: '28px' }}>
         <AuthInput
           label="Password"
           type={isPasswordVisible ? 'text' : 'password'}
@@ -81,11 +82,12 @@ export const Register = () => {
         />
       </AuthInputs>
 
-      <AuthIssuesRow align="center">
-        <Link to="/login">{t('auth.register.have_account')}</Link>
-      </AuthIssuesRow>
-      <AuthButton onClick={() => {}}>{t('auth.register.sign_up')}</AuthButton>
-      <ThirdPartyDisclaimer>{t('auth.register.or')}</ThirdPartyDisclaimer>
+      <AuthButton onClick={() => {}}>
+        {t('auth.reset_password.update_password')}
+      </AuthButton>
+      <ThirdPartyDisclaimer>
+        {t('auth.reset_password.sign_up')}
+      </ThirdPartyDisclaimer>
 
       <ExternalAuthApps>
         {externalAuthApps.map(({ icon, authHandler }) => (

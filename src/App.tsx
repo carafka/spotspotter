@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider, styled } from '@mui/material';
-import { Login, Register } from '@/auth/pages';
+import { ForgotPassword, Login, Register, ResetPassword } from '@/auth/pages';
 import { Home } from '@/map/pages';
 import { appTheme } from './themes';
 
@@ -17,6 +17,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </AppContainer>
     </ThemeProvider>
