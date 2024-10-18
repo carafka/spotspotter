@@ -1,0 +1,27 @@
+{
+  "auth": {
+    "login": {
+      "no_account": "No account yet...",
+      "forgot_password": "Forgot password?",
+      "sign_in": "Sign in",
+      "sign_up": "Or Sign up with"
+    },
+    "register": {
+      "have_account": "I already have an account!",
+      "sign_up": "Sign up",
+      "or": "Or use"
+    },
+    "forgot_password": {
+      "description": "Enter your email, and we'll send you a link to reset the password. Check your inbox, follow the link, and set up a new password to regain access.",
+      "easy": "Easy as that!",
+      "back_to_login": "Back to login...",
+      "reset_password": "Reset password",
+      "sign_up": "Or Sign up with"
+    },
+    "reset_password": {
+      "description": "Create a new password for your account. Ensure security by entering your new password twice.",
+      "update_password": "Update password",
+      "sign_up": "Or Sign up with"
+    }
+  }
+}

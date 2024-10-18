@@ -1,27 +1,27 @@
 {
   "auth": {
     "login": {
-      "no_account": "No account yet...",
-      "forgot_password": "Forgot password?",
-      "sign_in": "Sign in",
-      "sign_up": "Or Sign up with"
+      "no_account": "Nie masz jeszcze konta...",
+      "forgot_password": "Zapomniałeś hasła?",
+      "sign_in": "Zaloguj się",
+      "sign_up": "Lub zarejestruj się za pomocą"
     },
     "register": {
-      "have_account": "I already have an account!",
-      "sign_up": "Sign up",
-      "or_use": "Or use"
+      "have_account": "Mam już konto!",
+      "sign_up": "Zarejestruj się",
+      "or": "Lub użyj"
     },
     "forgot_password": {
-      "description": "Enter your email, and we'll send you a link to reset the password. Check your inbox, follow the link, and set up a new password to regain access.",
-      "easy": "Easy as that!",
-      "back_to_login": "Back to login...",
-      "reset_password": "Reset password",
-      "sign_up": "Or Sign up with"
+      "description": "Wprowadź swój adres e-mail, a my wyślemy Ci link do zresetowania hasła. Sprawdź swoją skrzynkę odbiorczą, kliknij link i skonfiguruj nowe hasło, aby odzyskać dostęp.",
+      "easy": "To proste!",
+      "back_to_login": "Wróć do logowania...",
+      "reset_password": "Zresetuj hasło",
+      "sign_up": "Lub zarejestruj się za pomocą"
     },
     "reset_password": {
-      "description": "Create a new password for your account. Ensure security by entering your new password twice.",
-      "update_password": "Update password",
-      "sign_up": "Or Sign up with"
+      "description": "Utwórz nowe hasło do swojego konta. Zapewnij bezpieczeństwo, wprowadzając nowe hasło dwukrotnie.",
+      "update_password": "Zaktualizuj hasło",
+      "sign_up": "Lub zarejestruj się za pomocą"
     }
   }
 }
