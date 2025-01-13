@@ -1,5 +1,9 @@
 import { Box, styled } from '@mui/material';
 
+export const AuthForm = styled('form')`
+  width: 330px;
+`;
+
 export const AuthInputs = styled(Box)`
   display: flex;
   flex-direction: column;
@@ -16,12 +20,12 @@ export const AuthIssuesRow = styled(Box)<{ align: string }>`
   font-size: 14px;
 
   * {
-    color: #34a853;
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 
   & > a:hover {
     filter: brightness(0.8);
-    color: #34a853;
+    color: ${({ theme }) => theme.palette.primary.main};
   }
 `;
 

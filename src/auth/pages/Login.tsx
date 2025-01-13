@@ -1,10 +1,6 @@
-// import { useTranslation } from "react-i18next";
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { IconButton, InputAdornment } from '@mui/material';
+import { useFormik } from 'formik';
 import {
   ThirdPartyAuthButton,
   AuthButton,
@@ -13,6 +9,7 @@ import {
 } from '@/auth/components';
 import { externalAuthApps } from '@/auth/constants';
 import {
+  AuthForm,
   AuthInputs,
   AuthIssuesRow,
   ExternalAuthApps,
@@ -22,50 +19,48 @@ import {
 export const Login = () => {
   const { t } = useTranslation();
 
-  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const handleClickisPasswordVisible = () =>
-    setIsPasswordVisible(!isPasswordVisible);
-  const handleMouseDownPassword = () =>
-    setIsPasswordVisible(!isPasswordVisible);
+  // Initialize Formik
+  const formik = useFormik({
+    initialValues: {
+      username: '',
+      password: '',
+    },
+    onSubmit: (values) => {
+      console.log(values); // Handle form submission
+    },
+  });
 
   return (
     <AuthLayout>
-      <AuthInputs>
-        <AuthInput label="Username" onChange={() => {}} />
-        <AuthInput
-          label="Password"
-          type={isPasswordVisible ? 'text' : 'password'}
-          onChange={() => {}}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickisPasswordVisible}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {isPasswordVisible ? (
-                    <VisibilityIcon />
-                  ) : (
-                    <VisibilityOffIcon />
-                  )}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-      </AuthInputs>
+      <AuthForm onSubmit={formik.handleSubmit}>
+        <AuthInputs>
+          <AuthInput
+            label={t('auth.core.username')}
+            name="username"
+            onChange={formik.handleChange}
+            value={formik.values.username}
+          />
+          <AuthInput
+            label={t('auth.core.password')}
+            name="password"
+            onChange={formik.handleChange}
+            value={formik.values.password}
+            isPasswordField
+          />
+        </AuthInputs>
 
-      <AuthIssuesRow align="space-between">
-        <Link to="/register">{t('auth.login.no_account')}</Link>
-        <Link to="/forgot-password">{t('auth.login.forgot_password')}</Link>
-      </AuthIssuesRow>
-      <AuthButton onClick={() => {}}>{t('auth.login.sign_in')}</AuthButton>
+        <AuthIssuesRow align="space-between">
+          <Link to="/register">{t('auth.login.no_account')}</Link>
+          <Link to="/forgot-password">{t('auth.login.forgot_password')}</Link>
+        </AuthIssuesRow>
+
+        <AuthButton onClick={() => {}}>{t('auth.login.sign_in')}</AuthButton>
+      </AuthForm>
+
       <ThirdPartyDisclaimer>{t('auth.login.sign_up')}</ThirdPartyDisclaimer>
-
       <ExternalAuthApps>
-        {externalAuthApps.map(({ icon, authHandler }) => (
-          <ThirdPartyAuthButton externalAuthHandler={authHandler}>
+        {externalAuthApps.map(({ icon, authHandler }, idx) => (
+          <ThirdPartyAuthButton key={idx} externalAuthHandler={authHandler}>
             {icon}
           </ThirdPartyAuthButton>
         ))}

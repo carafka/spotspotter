@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "core": {
+      "username": "Nom d'utilisateur",
+      "email": "Courriel",
+      "password": "Mot de passe",
+      "repeat_password": "Répéter le mot de passe"
+    },
+    "login": {
+      "no_account": "Pas encore de compte...",
+      "forgot_password": "Mot de passe oublié ?",
+      "sign_in": "S'inscrire",
+      "sign_up": "Ou Inscris-toi auprès de"
+    },
+    "register": {
+      "have_account": "J'ai déjà un compte !",
+      "sign_up": "S'inscrire",
+      "or": "Ou utilise"
+    },
+    "forgot_password": {
+      "description": "Entre ton email, et nous t'enverrons un lien pour réinitialiser le mot de passe. Vérifie ta boîte de réception, suis le lien et configure un nouveau mot de passe pour retrouver l'accès.",
+      "easy": "C'est aussi simple que cela !",
+      "back_to_login": "Retour à la connexion...",
+      "reset_password": "Réinitialiser le mot de passe",
+      "sign_up": "Ou Inscris-toi auprès de"
+    },
+    "reset_password": {
+      "description": "Crée un nouveau mot de passe pour ton compte. Assure-toi de la sécurité en saisissant deux fois ton nouveau mot de passe.",
+      "update_password": "Mettre à jour le mot de passe",
+      "sign_up": "Ou Inscris-toi auprès de"
+    }
+  }
+}
