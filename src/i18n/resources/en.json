@@ -1,5 +1,11 @@
 {
   "auth": {
+    "core": {
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "repeat_password": "Repeat Password"
+    },
     "login": {
       "no_account": "No account yet...",
       "forgot_password": "Forgot password?",

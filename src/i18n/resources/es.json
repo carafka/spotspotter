@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "core": {
+      "username": "Nombre de usuario",
+      "email": "Envía un correo electrónico a",
+      "password": "Contraseña",
+      "repeat_password": "Repite la contraseña"
+    },
+    "login": {
+      "no_account": "Todavía no hay cuenta...",
+      "forgot_password": "¿Has olvidado la contraseña?",
+      "sign_in": "Inicia sesión",
+      "sign_up": "O Inscríbete en"
+    },
+    "register": {
+      "have_account": "¡Ya tengo una cuenta!",
+      "sign_up": "Inscríbete",
+      "or": "O utiliza"
+    },
+    "forgot_password": {
+      "description": "Introduce tu correo electrónico y te enviaremos un enlace para restablecer la contraseña. Comprueba tu bandeja de entrada, sigue el enlace y establece una nueva contraseña para recuperar el acceso.",
+      "easy": "¡Así de fácil!",
+      "back_to_login": "Volver al inicio de sesión...",
+      "reset_password": "Restablecer contraseña",
+      "sign_up": "O Inscríbete en"
+    },
+    "reset_password": {
+      "description": "Crea una nueva contraseña para tu cuenta. Garantiza la seguridad introduciendo tu nueva contraseña dos veces.",
+      "update_password": "Actualizar contraseña",
+      "sign_up": "O Inscríbete en"
+    }
+  }
+}

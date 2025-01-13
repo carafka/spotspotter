@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "core": {
+      "username": "Gebruikersnaam",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "repeat_password": "Herhaal wachtwoord"
+    },
+    "login": {
+      "no_account": "Nog geen account...",
+      "forgot_password": "Wachtwoord vergeten?",
+      "sign_in": "Aanmelden",
+      "sign_up": "Of meld je aan bij"
+    },
+    "register": {
+      "have_account": "Ik heb al een account!",
+      "sign_up": "Aanmelden",
+      "or": "Of gebruik"
+    },
+    "forgot_password": {
+      "description": "Voer je e-mailadres in en we sturen je een link om het wachtwoord opnieuw in te stellen. Controleer je inbox, volg de link en stel een nieuw wachtwoord in om weer toegang te krijgen.",
+      "easy": "Zo eenvoudig is dat!",
+      "back_to_login": "Terug naar inloggen...",
+      "reset_password": "Wachtwoord opnieuw instellen",
+      "sign_up": "Of meld je aan bij"
+    },
+    "reset_password": {
+      "description": "Maak een nieuw wachtwoord aan voor je account. Zorg voor veiligheid door je nieuwe wachtwoord twee keer in te voeren.",
+      "update_password": "Wachtwoord bijwerken",
+      "sign_up": "Of meld je aan bij"
+    }
+  }
+}

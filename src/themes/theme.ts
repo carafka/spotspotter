@@ -26,31 +26,31 @@ export const appTheme = createTheme({
   },
   palette: {
     common: {
-      black: '#000',
-      white: '#fff',
+      black: '#000000', // For text and buttons
+      white: '#ffffff', // For the background and input fields
     },
     primary: {
-      light: '#7986cb',
-      main: '#3f51b5',
-      dark: '#303f9f',
-      contrastText: '#fff',
+      light: '#66bb6a', // A lighter green for hover states or accents
+      main: '#34a853', // The main green color (primary action color)
+      dark: '#1e7e34', // Darker green for active or focused states
+      contrastText: '#ffffff',
     },
     secondary: {
-      light: '#ff4081',
-      main: '#f50057',
-      dark: '#c51162',
-      contrastText: '#fff',
+      light: '#f5f5f5', // Light grey, used for less important elements or background areas
+      main: '#9e9e9e', // Mid-tone grey, for borders, dividers, or secondary text
+      dark: '#616161', // Dark grey for text or disabled states
+      contrastText: '#000000', // Black text on grey buttons
     },
     error: {
-      light: '#e57373',
-      main: '#f44336',
-      dark: '#d32f2f',
-      contrastText: '#fff',
+      light: '#e57373', // Red for error messages or alerts
+      main: '#f44336', // Primary red color for errors
+      dark: '#d32f2f', // Darker red for hover states or highlights
+      contrastText: '#ffffff', // White text on red buttons
     },
     grey: {
-      '50': '#fafafa',
-      '100': '#f5f5f5',
-      '200': '#eeeeee',
+      '50': '#fafafa', // Very light grey for background (e.g., search bar)
+      '100': '#f5f5f5', // Slightly darker grey for card or input backgrounds
+      '200': '#eeeeee', // Used for dividers or borders
       '300': '#e0e0e0',
       '400': '#bdbdbd',
       '500': '#9e9e9e',
@@ -66,14 +66,14 @@ export const appTheme = createTheme({
     contrastThreshold: 3,
     tonalOffset: 0.2,
     text: {
-      primary: 'rgba(0, 0, 0, 0.87)',
-      secondary: 'rgba(0, 0, 0, 0.54)',
-      disabled: 'rgba(0, 0, 0, 0.38)',
+      primary: '#000000', // Black text for primary content
+      secondary: '#616161', // Dark grey for secondary content or hints
+      disabled: '#9e9e9e', // Light grey for disabled elements
     },
-    divider: 'rgba(0, 0, 0, 0.12)',
+    divider: '#e0e0e0', // Light grey dividers between sections
     background: {
-      paper: '#fff',
-      default: '#fafafa',
+      paper: '#ffffff', // White background for cards or panels
+      default: '#fafafa', // Slight off-white for general background
     },
     action: {
       active: 'rgba(0, 0, 0, 0.54)',
@@ -84,6 +84,7 @@ export const appTheme = createTheme({
       disabledBackground: 'rgba(0, 0, 0, 0.12)',
     },
   },
+
   shadows: [
     'none',
     '0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)',

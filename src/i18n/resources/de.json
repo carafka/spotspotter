@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "core": {
+      "username": "Benutzername",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "repeat_password": "Passwort wiederholen"
+    },
+    "login": {
+      "no_account": "Noch kein Konto...",
+      "forgot_password": "Passwort vergessen?",
+      "sign_in": "Eintragen",
+      "sign_up": "Oder melde dich mit"
+    },
+    "register": {
+      "have_account": "Ich habe bereits ein Konto!",
+      "sign_up": "Anmelden",
+      "or": "Oder benutze"
+    },
+    "forgot_password": {
+      "description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Link, um dein Passwort zurückzusetzen. Überprüfe deinen Posteingang, folge dem Link und richte ein neues Passwort ein, um wieder Zugang zu erhalten.",
+      "easy": "So einfach ist das!",
+      "back_to_login": "Zurück zum Login...",
+      "reset_password": "Passwort zurücksetzen",
+      "sign_up": "Oder melde dich mit"
+    },
+    "reset_password": {
+      "description": "Erstelle ein neues Passwort für dein Konto. Um die Sicherheit zu gewährleisten, gibst du dein neues Passwort zweimal ein.",
+      "update_password": "Passwort aktualisieren",
+      "sign_up": "Oder melde dich mit"
+    }
+  }
+}

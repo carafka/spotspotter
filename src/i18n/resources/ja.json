@@ -1,0 +1,33 @@
+{
+  "auth": {
+    "core": {
+      "username": "ユーザー名",
+      "email": "電子メール",
+      "password": "パスワード",
+      "repeat_password": "リピートパスワード"
+    },
+    "login": {
+      "no_account": "アカウントはまだない。",
+      "forgot_password": "パスワードをお忘れの場合",
+      "sign_in": "ログインする",
+      "sign_up": "または"
+    },
+    "register": {
+      "have_account": "私はすでにアカウントを持っている！",
+      "sign_up": "登録する",
+      "or": "あるいは、次のようにする。"
+    },
+    "forgot_password": {
+      "description": "パスワードをリセットするためのリンクを送信する。受信箱を確認し、リンクに��って新しいパスワードを設定し、アクセスを再開する。",
+      "easy": "簡単なことだ！",
+      "back_to_login": "ログインに戻る",
+      "reset_password": "パスワードをリセットする",
+      "sign_up": "または"
+    },
+    "reset_password": {
+      "description": "アカウントの新しいパスワードを作成する。新しいパスワードを2回入力し、セキュリティを確保する。",
+      "update_password": "パスワードを更新する",
+      "sign_up": "または"
+    }
+  }
+}

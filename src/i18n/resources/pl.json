@@ -1,5 +1,11 @@
 {
   "auth": {
+    "core": {
+      "username": "Nazwa użytkownika",
+      "email": "Email",
+      "password": "Hasło",
+      "repeat_password": "Powtórz hasło"
+    },
     "login": {
       "no_account": "Nie masz jeszcze konta...",
       "forgot_password": "Zapomniałeś hasła?",

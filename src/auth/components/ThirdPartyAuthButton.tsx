@@ -1,16 +1,20 @@
 import { Box, styled } from '@mui/material';
 
 type ThirdPartyAuthButtonProps = {
+  key: number;
   externalAuthHandler: () => void;
   children: React.ReactNode;
 };
 
 export const ThirdPartyAuthButton = ({
+  key,
   externalAuthHandler,
   children,
 }: ThirdPartyAuthButtonProps) => {
   return (
-    <ButtonContainer onClick={externalAuthHandler}>{children}</ButtonContainer>
+    <ButtonContainer key={key} onClick={externalAuthHandler}>
+      {children}
+    </ButtonContainer>
   );
 };
 
